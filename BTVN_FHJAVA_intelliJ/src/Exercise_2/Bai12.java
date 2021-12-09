@@ -17,11 +17,12 @@ public class Bai12 {
             for (int i = 2; i < n; i++){
                 if ((arr[i] - arr[i-1]) * (arr[i-1] - arr[i-2]) <= 0){
                     check = false;
+                    System.out.println("False");
+                    break;
                 }
             }
         }
         if (check) System.out.println("True");
-        else System.out.println("False");
         sc.close();
     }
 }

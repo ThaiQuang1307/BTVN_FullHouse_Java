@@ -14,10 +14,7 @@ public class Bai8 {
 
         for (int i = 0; i < leng; i++) {
             if (Character.isUpperCase(s.charAt(i))){
-                if (i == 0)
-                    output += Character.toLowerCase(s.charAt(i));
-                else
-                    output += "_" + Character.toLowerCase(s.charAt(i));
+                output += "_" + Character.toLowerCase(s.charAt(i));
             }else {
                 output += s.charAt(i);
             }

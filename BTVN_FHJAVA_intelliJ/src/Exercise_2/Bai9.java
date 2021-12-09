@@ -10,7 +10,7 @@ public class Bai9 {
         System.out.print("Enter snake case string: ");
         String s = sc.nextLine();
         String[] str = s.split("_");
-        String output = "";
+        String output = "" + str[0];
         for (int i = 0; i < str.length; i++) {
             String temp = "";
             temp += Character.toUpperCase(str[i].charAt(0));
