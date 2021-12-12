@@ -1,0 +1,7 @@
+city, do choi
+OOP, huong doi tuong
+dog, cho
+cat, meo
+quang, thai
+quang, thai
+quang, thaiquang, thai
