@@ -20,9 +20,9 @@ public class Bai11 {
             while (n > 0){  // chia toi khi phan nguyen cua phep chia == 0 thi dung lai
                 int soDu = n % base; // lấy phần dư
                 n /= base;  // chia lấy nguyên
-                s += kitu[soDu]; // gan gia tri tuong ung phan du sau moi lan chia
+                s = kitu[soDu] + s; // gan gia tri tuong ung phan du sau moi lan chia
             }
-            s = new StringBuffer(s).reverse().toString();
+//            s = new StringBuffer(s).reverse().toString();
             return s;
         }
     }
