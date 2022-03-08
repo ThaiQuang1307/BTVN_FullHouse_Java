@@ -1,0 +1,72 @@
+
+1. Class bao gồm 3 thành phần chính
+	- Thuộc tính
+	- Phương thức khởi tạo (constructor)
+	- Phương thức xử lý
+2. Tứ khóa this
+	- Hoạt động như một đối tượng hiện tại(constant)
+	- Từ khóa this còn được gói đến như 1 phương thức khởi tạo
+3. Phạm vi truy cập
+	- Đối với class
+		+ public cho phép sử class ở mọi nơi khi được import
+		+ default chỉ cho phép trong phạm của package chứa nó
+	- Đối với những thành phần trong class
+		+ public cho phép sử thành phần đó được sử dụng ở mọi nơi thông qua đối tượng
+		+ default chỉ cho phep sử dụng thành phần đó trong phạm vi của package chứa nó thông qua đối tượng
+		+ protected tương đương với default, thêm vào là có thể thông qua class mà nó kề thừa
+		+ private chỉ cho phép sử dụng bên trong class
+4. Từ khóa static (hay còn gọi là thành phần static trong class)
+	- Thành phần này có thể được gọi thông qua class, không cần khởi tạo đối tượng
+	- Cấu trúc khai báo thành phần static
+		+ Thuộc tính phạm_vi static kiểu tên (biến class)
+		+ Phương thức phạm_vi static kiểu_trả_về tên() (hàm)
+	- Truy cập vào thành phần static thông qua tên của class
+		Tên_class.tên_thành_phần_static
+	- Thành phần static chỉ có thể truy cập đến những thành phần static khác trong class
+5. Những tính chất của oop trong java (4 tính chất)
+	- Tính đóng gói(encapsulation) Tất cả những thuộc tính trong class đều có phạm vi là private và cần đến những phương thức get và set để có thể lấy thông tin và thay đổi thông tinh.
+	- Tính kế thừa(inheritance)
+		+ Để kế thừa 1 class thì dùng từ khóa extends.
+		+ Phải có constructor trùng với class mà nó kế thừa.
+		+ Từ khóa super giống với từ khóa this.
+		+ Class Con có thể sử dụng những thành phân trong class Cha nếu được cho phép.
+		+ Trong Java, chỉ có thể đơn kế thừa (class Con chỉ có thể kế thừa 1 class Cha)
+		+ Tạo ra một phương thức trùng tên với một phương thức nào đó trong class Cha thì đó được gọi là Ghi đè (@Override)		
+		+ Từ khóa final
+			 Đối với thuộc tính sử dụng như 1 hằng số
+				phạm_vi static final kiểu tên;
+			 Đối với phương thức ngăn chặn việc ghi đè từ 1 class Con
+				phạm_vi static final kiểu_trả_về tên()
+			 Đối với class ngăn chặn việc kế thừa từ 1 class khác
+				phạm_vi final class tên_class {}
+	- Tính đa hình(polymorphism)
+		+ Đối tượng của class nào chỉ được sử dụng những thành phần có trong class đó
+		+ Up Casting Tạo một đối tượng của class Cha và là thực thể của class Con
+		+ Down Casting Từ đối tượng của class Cha có thể được ép xuống đối tượng của class Con
+			((Class Con)tên_biến).
+		+ Nếu phương thức nào đó của class Cha được ghi đè bởi lớp Con, thì khi đối tượng của class Cha gọi đến phương thức bị ghi đè đó thì phương thức được gọi sẽ ở class Con
+	- Trừu tượng(abstraction)
+		+ Class trừu tượng phạm_vi abstract class tên_lớp {}
+		+ Khác class thông thường là không có constructor và chứa những phương thức trừu tượng
+		+ Phương thức trừu tượng là phạm_vi abstract kiểu_trả_về tên();
+		+ Những class mà kế thừa class trừu tượng thì phải ghi đè những phương thức trừu tượng
+		+ Kế thừa một class trừu tượng thì dùng từ khóa extends
+New Text Document.txt
+Đang hiển thị New Text Document.txt.
+
+6. Interface trong java:
+    - Cấu trúc:
+        phạm_vi interface ten {}
+    - Cho phép class đa kế thừa
+    - Để kế thừa 1 interface ta dùng từ khóa "implements"
+    - Interface ko constructor
+    - Gồm 3 thành phần chính:
+        + public static final kiểu_dữ_liệu Ten_thuộc_tính = giá_trị; // kiểu_trả_về Tên_thuộc_tính = giá trị;
+        + public abstract kiểu_trả_về Tên_phương_thức(); // kiểu_trả_về Tên_phương_thức();
+        + public static kiểu_trả_về Tên_phương_thức(); // có 2 phạm vi (public , private)
+
+7. Generic trong java:
+    - Phương thức generic.
+    - Class generic.
+
+
